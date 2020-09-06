@@ -1,0 +1,2 @@
+# inventoryBarcode
+Inventory Monitoring
