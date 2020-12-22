@@ -1,0 +1,39 @@
+<%- include('partials/headers.ejs') %>
+    <div class="wrapper">
+        <%- include('partials/navbar.ejs') %>
+        <div class="container" id="main">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/paystack/pay" method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Full Name" name="fullname">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" placeholder="Email" name="email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="amount">Amount</label>
+                                <select name="amount" class="form-control">
+                                    <option selected>Select Amount...</option>
+                                    <option value="50">IDR 50.000</option>
+                                    <option value="100">IDR 100.000</option>
+                                    <option value="150">IDR 150.000</option>
+                                    <option value="200">IDR 200.000</option>
+                                    <option value="300">IDR 300.000</option>
+                                    <option value="500">IDR 500.000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i>Donation</button>
+                        <button type="reset" class="btn btn-warning"><i class="fas fa-trash"></i>Clear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+<%- include('partials/footers.ejs') %>
